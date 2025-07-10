@@ -1,31 +1,94 @@
-# React & Tailwind CSS Starter Pack
+# RouteWise - Smart Waste Collection System
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+RouteWise is a full-stack web application designed to optimize garbage collection routes based on bin fill levels (manually updated by Admin) and real road distances. It provides dashboards for Admins, Collectors, and Citizens to manage bins, view routes, and report issues.
 
-## Usage
+---
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+## Tech Stack
 
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
+**Frontend (React):**
+- React.js (CRA)
+- Tailwind CSS
+- React Router
+- Axios
+- Leaflet.js (Map)
+- Lucide React (Icons)
 
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
+**Backend (Node.js):**
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- JWT for Auth
+- Dijkstra's Algorithm + Greedy approach for route planning
+- OpenRouteService API (for real road distances between bins)
 
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
+---
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+## 👥 Roles
 
-## Contributing
+- **Admin:** Add/edit/remove bins, mark depot, update bin fill levels manually, view reports
+- **Collector:** View optimized route for collecting full bins (>=75% fill level)
+- **Citizen:** Report bin-related issues 
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+---
+
+## 📦 Key Features
+
+- Add bins/depot via interactive map (Admin)
+- Admin updates fill levels manually
+- Automatic road-distance edge creation using ORS API
+- MongoDB stores bin and edge data
+- Optimized route computed using Dijkstra + Greedy logic
+- Citizens can report bin issues
+- Role-based dashboards and JWT-based authentication
+
+---
+
+## 🔧 Project Setup
+
+### Prerequisites
+- Node.js and npm
+- MongoDB running locally or via Atlas
+- OpenRouteService (ORS) API key
+
+---
+
+
+### 🚀 Installation & Running the App
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/harshitasuryawanshi2003/RouteWise.git
+   cd RouteWise
+   ```
+
+2. Install root dependencies (for concurrently):
+   ```bash
+   npm install
+   ```
+
+3. Install backend dependencies:
+  ```bash
+  cd server
+  npm install
+  ```
+
+4. Add a .env file in the /server folder with:
+```bash
+    PORT=4000
+    MONGODB_URL=your_mongodb_connection_uri
+    JWT_SECRET=your_jwt_secret_key
+    ORS_API_KEY=your_ors_api_key
+```
+
+5. Go back to root and run both servers:
+   ```bash
+    cd ..
+    npm run dev
+   ```
+
+ This will start:
+
+Backend on: http://localhost:4000
+
+Frontend on: http://localhost:3000
