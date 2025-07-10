@@ -24,7 +24,7 @@ RouteWise is a full-stack web application designed to optimize garbage collectio
 
 ---
 
-## 👥 Roles
+## Roles
 
 - **Admin:** Add/edit/remove bins, mark depot, update bin fill levels manually, view reports
 - **Collector:** View optimized route for collecting full bins (>=75% fill level)
@@ -32,7 +32,7 @@ RouteWise is a full-stack web application designed to optimize garbage collectio
 
 ---
 
-## 📦 Key Features
+## Key Features
 
 - Add bins/depot via interactive map (Admin)
 - Admin updates fill levels manually
@@ -44,7 +44,7 @@ RouteWise is a full-stack web application designed to optimize garbage collectio
 
 ---
 
-## 🔧 Project Setup
+## Project Setup
 
 ### Prerequisites
 - Node.js and npm
@@ -54,7 +54,7 @@ RouteWise is a full-stack web application designed to optimize garbage collectio
 ---
 
 
-### 🚀 Installation & Running the App
+### Installation & Running the App
 
 1. Clone the repository:
    ```bash
